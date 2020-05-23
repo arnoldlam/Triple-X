@@ -19,9 +19,28 @@ int main() {
 
 	std::cout << "+ There are 3 numbers in the code" << std::endl;
 	std::cout << "+ The codes add up to " << SecretNumberSum << std::endl;
-	std::cout << "+ The codes multiply to give " << SecretNumberProduct << std::endl;
+	std::cout << "+ The codes multiply to give " << SecretNumberProduct << std::endl << std:: endl;
 
-	int PlayerGuess; 
+	int GuessA, GuessB, GuessC; 
+
+	std::cout << "Please guess the three numbers, seperated by a space: "; 
+	std::cin >> GuessA;
+	std::cin >> GuessB;
+	std::cin >> GuessC;
+
+	std::cout << std::endl << "You've entered: " << GuessA << ", " << GuessB << ", " <<GuessC << std::endl << std::endl; 
+
+	int GuessSum = GuessA + GuessB + GuessC;
+	int GuessProduct = GuessA * GuessB * GuessC; 
+
+	if (GuessSum == SecretNumberSum && GuessProduct == SecretNumberProduct) {
+		std::cout << "You win!";
+	}
+	else {
+		std::cout << "You lose.";
+	}
+
+	std::cout << std::endl;
 
 	return 0; 
 }
